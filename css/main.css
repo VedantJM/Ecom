@@ -1,0 +1,135 @@
+*{
+    padding:0px;
+    box-sizing:content-box;
+    margin:0px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color:lightgrey;
+}
+#logo{
+    height:60px;
+    width:60px;
+    border-radius:50px;
+    margin-top:20px;
+}
+#cart_image{
+    height:60px;
+    width:60px;
+    margin-top:20px;
+    position:absolute;
+    bottom:0;
+}
+#addtocart{
+    position:absolute;
+    bottom:0;
+}
+.submenu{
+    list-style: none;
+    width:50%;
+    position: relative;
+
+}
+.submenu #cart{
+    display:none;
+}
+.submenu:hover #cart{
+    display:block;
+}
+#online_courses{
+    text-align:center;
+    margin-top:40px;
+}
+#card1{
+    border:1px grey solid;
+    width:350px;
+    background-color: whitesmoke;
+
+}
+#courseimage{
+    width:100%;
+}
+#coursetype{
+    text-align:center;
+    font-size:27px;
+}
+#stars{
+margin-left:130px;
+width:100px;
+height:25px;
+}
+#previouscost{
+    text-decoration:line-through;
+    color:red;
+}
+#currentcost{
+    color:green;
+    margin-left:170px;
+}
+#addtocart{
+    font-size:10rem;
+}
+#card2{
+    border:1px grey solid;
+    width:350px;
+    background-color: whitesmoke;
+
+
+}
+#card3{
+    border:1px grey solid;
+    width:350px;
+    background-color: whitesmoke;
+
+
+}
+#card4{
+    border:1px grey solid;
+    width:350px;
+    background-color: whitesmoke;
+
+
+}
+#card5{
+    border:1px grey solid;
+    width:350px;
+    background-color: whitesmoke;
+
+
+}
+#card6{
+    border:1px grey solid;
+    width:350px;
+    background-color: whitesmoke;
+}
+#card7{
+    border:1px grey solid;
+    width:350px;
+    background-color: whitesmoke;
+}
+#card8{
+    border:1px grey solid;
+    width:350px;
+    background-color: whitesmoke;
+}
+#card9{
+    border:1px grey solid;
+    width:350px;
+    background-color: whitesmoke;
+}
+#card10{
+    border:1px grey solid;
+    width:350px;
+    background-color: whitesmoke;
+}
+.courses_container{
+    display:grid;
+    grid-gap:70px;
+    margin: 0 auto;
+    grid-template-columns: auto auto auto;
+    max-width:1080px;
+}
+.course_info{
+    position:relative;
+    height: 280px;
+}
