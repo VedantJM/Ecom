@@ -11,14 +11,10 @@ body{
     height:60px;
     width:60px;
     border-radius:50px;
-    margin-top:20px;
 }
 #cart_image{
-    height:60px;
-    width:60px;
-    margin-top:20px;
-    position:absolute;
-    bottom:0;
+    height:50px;
+    width:50px;
 }
 #addtocart{
     position:absolute;
@@ -27,14 +23,14 @@ body{
 .submenu{
     list-style: none;
     width:50%;
-    position: relative;
-
 }
 .submenu #cart{
     display:none;
 }
 .submenu:hover #cart{
     display:block;
+    right:0px;
+    position:absolute;
 }
 #online_courses{
     text-align:center;
@@ -132,4 +128,7 @@ height:25px;
 .course_info{
     position:relative;
     height: 280px;
+}
+.header123{
+    margin-top:20px;
 }
