@@ -23,12 +23,13 @@ body{
 .submenu{
     list-style: none;
     width:50%;
+    position:relative;
 }
 .submenu #cart{
     display:none;
     background-color: white;
-    height:400px;
-    width:300px;
+    min-height:400px;
+    min-width:300px;
     padding:20px;
     border: 1px grey solid;
     z-index:9999;
@@ -114,4 +115,9 @@ body{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
-
+.delete-course{
+    background-color: red;
+    border-radius:50%;
+    text-decoration: none;
+    padding: 4px 8px;
+}

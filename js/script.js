@@ -4,30 +4,35 @@ var tablebody = document.querySelector("#list-cart tbody");
 
 loadEventListeners();
 function loadEventListeners() {
-    cart.addEventListener('click', function (){
-        alert("hello")
-    })
-courses.addEventListener('click', function(event){
+    cart.addEventListener('click', deleteCourse)
+    courses.addEventListener('click', addCourse)
+}
+function addCourse(event){
     if(event.target.classList.contains("add-cart")){
-
         const course = event.target.parentElement.parentElement;
-        var img =  course.querySelector('img');
-        var CourseType = courses.querySelector('h3').textContent;
-        var price = courses.querySelector('#currentcost').textContent;
-        var id = courses.querySelector('.add-cart').getAttribute("data-id");
-
+        const courseInfo = {
+            img :course.querySelector('img').src,
+            courseType: courses.querySelector('h3').textContent,
+            price: courses.querySelector('#currentcost').textContent,
+            id: courses.querySelector('.add-cart').getAttribute("data-id")
+        }
         var row = document.createElement("tr");
         row.innerHTML = `
         <td>
-            <img src="${img}" width=100/>
+            <img src="${courseInfo.img}" width=100/>
         </td> 
-        <td>${CourseType}</td>
-        <td>${price}</td>
+        <td>${courseInfo.courseType}</td>
+        <td>${courseInfo.price}</td>
         <td>
-            <a href="#" class="delete-course" data-id="${id}"></a>
+            <a href="#" class="delete-course" data-id="${courseInfo.id}">X</a>
             </td>
         `;
         tablebody.appendChild(row);
     }
-})
+}
+
+function deleteCourse(event){
+    if (event.target.classList.contains("delete-course")){
+        event.target.parentElement.parentElement.remove();
+    }
 }
