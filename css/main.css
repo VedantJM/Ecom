@@ -116,8 +116,9 @@ body{
     }
 }
 .delete-course{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.767);
     border-radius:50%;
     text-decoration: none;
     padding: 4px 8px;
+    color:white;
 }
