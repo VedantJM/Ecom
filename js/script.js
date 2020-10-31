@@ -39,7 +39,6 @@ function deleteCourse(event){
         event.target.parentElement.parentElement.remove();
     }
 }
-localStorage.clear();
 function emptyCart() {
     while (tablebody.firstChild){
         tablebody.removeChild(tablebody.firstChild);
@@ -49,11 +48,11 @@ function emptyCart() {
 function saveCourseToLocalStorage(course){
     let courses = getCoursesLocalStorage();
     courses.push(course);
-    localStorage.setItem('courses', JSON.stringify(course));
+    localStorage.setItem('courses', JSON.stringify(courses));
 }
 
 function readLocalStorage(){
-    let courses = getCoursesLocalStorage;
+    let courses = getCoursesLocalStorage();
     console.log(courses);
     courses.forEach(function(course){
         let row = document.createElement('tr');
