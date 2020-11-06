@@ -33,16 +33,18 @@ function addCourse(event){
         saveCourseToLocalStorage(courseInfo);
     }
 }
-
 function deleteCourse(event){
     if (event.target.classList.contains("delete-course")){
         event.target.parentElement.parentElement.remove();
+        let courses = getCoursesLocalStorage(); 
     }
+    deleteCourseFromLocalStorage(event.target.getAttribute('data-id'));
 }
 function emptyCart() {
     while (tablebody.firstChild){
         tablebody.removeChild(tablebody.firstChild);
     }
+    localStorage.clear();
 }
 
 function saveCourseToLocalStorage(course){
@@ -57,7 +59,7 @@ function readLocalStorage(){
     courses.forEach(function(course){
         let row = document.createElement('tr');
         row.innerHTML = `
-        <td><img src="${course.img}" /></td>
+        <td><img src="${course.img}" width="100" /></td>
         <td>${course.courseType}</td>
         <td>${course.price}</td>
         <td>
@@ -77,4 +79,16 @@ function getCoursesLocalStorage(){
         courses = JSON.parse(localStorage.getItem('courses'));
     }
     return courses;
+}
+
+function deleteCourseFromLocalStorage(courseId){
+    let courses = getCoursesLocalStorage();
+
+    courses.forEach((course, index) => {
+        if(course.id == courseId){
+            courses.splice(index, 1);
+        }
+    });
+
+    localStorage.setItem('courses', JSON.stringify(courses));
 }
